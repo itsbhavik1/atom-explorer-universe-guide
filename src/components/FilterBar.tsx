@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { 
@@ -42,15 +43,15 @@ export function FilterBar({
   };
 
   const handleCategoryChange = (value: string) => {
-    onCategoryChange(value as ElementCategory | "");
+    onCategoryChange(value === "all" ? "" : value as ElementCategory);
   };
 
   const handleStateChange = (value: string) => {
-    onStateChange(value as ElementState | "");
+    onStateChange(value === "all" ? "" : value as ElementState);
   };
 
   const handleMetalTypeChange = (value: string) => {
-    onMetalTypeChange(value as MetalType | "");
+    onMetalTypeChange(value === "all" ? "" : value as MetalType);
   };
 
   const handleReset = () => {
@@ -77,7 +78,7 @@ export function FilterBar({
             <SelectValue placeholder="Category" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Categories</SelectItem>
+            <SelectItem value="all">All Categories</SelectItem>
             {Object.entries(categoryLabels).map(([value, label]) => (
               <SelectItem key={value} value={value}>
                 {label}
@@ -91,7 +92,7 @@ export function FilterBar({
             <SelectValue placeholder="State" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All States</SelectItem>
+            <SelectItem value="all">All States</SelectItem>
             {Object.entries(stateLabels).map(([value, label]) => (
               <SelectItem key={value} value={value}>
                 {label}
@@ -105,7 +106,7 @@ export function FilterBar({
             <SelectValue placeholder="Metal Type" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">All Types</SelectItem>
+            <SelectItem value="all">All Types</SelectItem>
             {Object.entries(metalTypeLabels).map(([value, label]) => (
               <SelectItem key={value} value={value}>
                 {label}
