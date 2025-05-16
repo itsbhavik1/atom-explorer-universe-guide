@@ -7,7 +7,7 @@ interface ElementTileProps {
   onClick: (element: Element) => void;
   isSelected?: boolean;
   isPinned?: boolean;
-  className?: string; // Add className prop to fix the TypeScript error
+  className?: string;
 }
 
 export function ElementTile({ 
@@ -24,9 +24,10 @@ export function ElementTile({
         `bg-${element.category} bg-opacity-20 border-${element.category} border-opacity-50`,
         isSelected && "ring-2 ring-primary ring-offset-2",
         isPinned && "border-2 border-primary",
-        className // Add className to the className list
+        className
       )}
       onClick={() => onClick(element)}
+      title={element.name}
     >
       <span className="absolute top-0.5 left-1 text-xs opacity-70">
         {element.atomicNumber}

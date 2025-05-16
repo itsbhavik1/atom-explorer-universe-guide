@@ -134,6 +134,7 @@ export function PeriodicTable() {
                 onClick={handleElementClick}
                 isSelected={selectedElement?.atomicNumber === element.atomicNumber}
                 isPinned
+                className=""
               />
             ))}
           </div>
@@ -143,8 +144,13 @@ export function PeriodicTable() {
       <div className="grid grid-cols-1 lg:grid-cols-7 gap-6">
         {/* Periodic Table Grid */}
         <div className="col-span-1 lg:col-span-5 overflow-auto">
-          <div className="grid grid-cols-18 gap-1 w-full min-w-[900px]" style={{ gridTemplateColumns: 'repeat(18, minmax(0, 1fr))' }}>
-            {grid.map((row, rowIndex) => (
+          <div className="grid gap-1 w-full min-w-[900px]" 
+               style={{ 
+                 display: 'grid',
+                 gridTemplateColumns: 'repeat(18, minmax(0, 1fr))',
+                 gridTemplateRows: 'repeat(10, minmax(0, 1fr))'
+               }}>
+            {grid.map((row, rowIndex) => 
               row.map((element, colIndex) => (
                 <div key={`${rowIndex}-${colIndex}`} className="aspect-square">
                   {element && (
@@ -153,7 +159,6 @@ export function PeriodicTable() {
                       onClick={handleElementClick}
                       isSelected={selectedElement?.atomicNumber === element.atomicNumber}
                       isPinned={isElementPinned(element)}
-                      // If filters are applied and this element doesn't match, apply styles
                       className={
                         (searchTerm || categoryFilter || stateFilter || metalTypeFilter) &&
                         !isElementFiltered(element)
@@ -164,7 +169,7 @@ export function PeriodicTable() {
                   )}
                 </div>
               ))
-            ))}
+            )}
           </div>
         </div>
 
