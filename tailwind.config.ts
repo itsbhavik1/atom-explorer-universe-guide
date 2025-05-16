@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Element category colors
+				'alkali-metal': '#FF6B6B',
+				'alkaline-earth-metal': '#FF9E7A',
+				'transition-metal': '#FFCA80',
+				'post-transition-metal': '#E3E36A',
+				'metalloid': '#BAED91',
+				'nonmetal': '#B0E8F9',
+				'noble-gas': '#D5B5FF',
+				'lanthanide': '#F2A1FF',
+				'actinide': '#F5ADC0',
+				'unknown': '#CCCCCC',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +96,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'scale-up': {
+					'0%': { transform: 'scale(0.95)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'scale-up': 'scale-up 0.3s ease-out'
 			}
 		}
 	},

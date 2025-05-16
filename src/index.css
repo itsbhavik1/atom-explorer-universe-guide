@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,110 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Element Category Colors */
+.bg-alkali-metal {
+  background-color: rgba(255, 107, 107, 0.7);
+}
+.text-alkali-metal {
+  color: #d34848;
+}
+.border-alkali-metal {
+  border-color: rgba(255, 107, 107, 0.7);
+}
+
+.bg-alkaline-earth-metal {
+  background-color: rgba(255, 158, 122, 0.7);
+}
+.text-alkaline-earth-metal {
+  color: #d17642;
+}
+.border-alkaline-earth-metal {
+  border-color: rgba(255, 158, 122, 0.7);
+}
+
+.bg-transition-metal {
+  background-color: rgba(255, 202, 128, 0.7);
+}
+.text-transition-metal {
+  color: #d18c42;
+}
+.border-transition-metal {
+  border-color: rgba(255, 202, 128, 0.7);
+}
+
+.bg-post-transition-metal {
+  background-color: rgba(227, 227, 106, 0.7);
+}
+.text-post-transition-metal {
+  color: #a9a940;
+}
+.border-post-transition-metal {
+  border-color: rgba(227, 227, 106, 0.7);
+}
+
+.bg-metalloid {
+  background-color: rgba(186, 237, 145, 0.7);
+}
+.text-metalloid {
+  color: #6fa348;
+}
+.border-metalloid {
+  border-color: rgba(186, 237, 145, 0.7);
+}
+
+.bg-nonmetal {
+  background-color: rgba(176, 232, 249, 0.7);
+}
+.text-nonmetal {
+  color: #4a9cc2;
+}
+.border-nonmetal {
+  border-color: rgba(176, 232, 249, 0.7);
+}
+
+.bg-noble-gas {
+  background-color: rgba(213, 181, 255, 0.7);
+}
+.text-noble-gas {
+  color: #9461d3;
+}
+.border-noble-gas {
+  border-color: rgba(213, 181, 255, 0.7);
+}
+
+.bg-lanthanide {
+  background-color: rgba(242, 161, 255, 0.7);
+}
+.text-lanthanide {
+  color: #b149c4;
+}
+.border-lanthanide {
+  border-color: rgba(242, 161, 255, 0.7);
+}
+
+.bg-actinide {
+  background-color: rgba(245, 173, 192, 0.7);
+}
+.text-actinide {
+  color: #c56379;
+}
+.border-actinide {
+  border-color: rgba(245, 173, 192, 0.7);
+}
+
+.bg-unknown {
+  background-color: rgba(204, 204, 204, 0.7);
+}
+.text-unknown {
+  color: #808080;
+}
+.border-unknown {
+  border-color: rgba(204, 204, 204, 0.7);
+}
+
+/* Fix for grid columns */
+.grid-cols-18 {
+  grid-template-columns: repeat(18, minmax(0, 1fr));
 }
