@@ -101,7 +101,6 @@ export function PeriodicTable() {
         <h1 className="text-3xl font-bold tracking-tight">Periodic Table of Elements</h1>
         <p className="text-muted-foreground">
           Explore the chemical elements organized by their properties.
-          {elements.length < 118 && " (Showing sample elements only)"}
         </p>
       </div>
 
@@ -175,11 +174,6 @@ export function PeriodicTable() {
               ))
             )}
           </div>
-          {elements.length < 118 && (
-            <div className="mt-4 text-sm text-muted-foreground text-center">
-              Note: This is a demonstration with a sample of elements. The complete periodic table has 118 elements.
-            </div>
-          )}
         </div>
 
         {/* Element Details Panel */}
