@@ -1,8 +1,6 @@
-
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { 
-  CategoryScale,
   ElementCategory,
   ElementState,
   MetalType,
