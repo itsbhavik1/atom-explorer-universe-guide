@@ -147,7 +147,7 @@ export function PeriodicTable() {
       <div className="grid grid-cols-1 lg:grid-cols-7 gap-6">
         {/* Periodic Table Grid */}
         <div className="col-span-1 lg:col-span-5 overflow-auto">
-          <div className="grid gap-1 w-full min-w-[900px]" 
+          <div className="grid gap-1 w-full min-w-[1200px]" 
                style={{ 
                  display: 'grid',
                  gridTemplateColumns: 'repeat(18, minmax(0, 1fr))',
