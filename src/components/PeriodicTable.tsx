@@ -81,7 +81,7 @@ export function PeriodicTable() {
     // Find the element with matching atomic number
     const element = elements.find((e) => e.atomicNumber === atomicNumber);
     if (element) {
-      grid[y][x] = element;
+      grid[y][x - 1] = element;
     } 
     // If the element is not in our elements array but we have a position for it,
     // we'll render an empty tile or placeholder
